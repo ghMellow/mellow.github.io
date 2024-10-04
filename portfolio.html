@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page con Flowbite</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/flowbite@1.5.0/dist/flowbite.min.js"></script>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Landing Page - Hero Section</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <style>
+            /* Stile per la sezione hero */
+            .hero-text {
+                font-size: 7rem;
+                /* Testo più grande */
+                font-weight: 600;
+                /* Grassetto ridotto */
+                line-height: 1.1;
+            }
+
+            .hero-btn {
+                font-weight: bold;
+                padding: 10px 20px;
+                border-radius: 30px;
+                background-color: #000;
+                color: white;
+                text-transform: uppercase;
+            }
+
+            .about-btn {
+                border-radius: 20px;
+                padding: 6px 12px;
+                border: 1px solid #888;
+                color: #444;
+            }
+
+            .custom-position1 {
+                position: absolute;
+                top: 7rem;
+                right: 6rem;
+                z-index: 10;
+                opacity: 0;
+                transform: translateY(20px);
+                transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+            }
+
+            .custom-position2 {
+                position: absolute;
+                top: 14rem;
+                left: 6rem;
+                opacity: 0;
+                transform: translateY(20px);
+                transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+            }
+
+            .custom-position3 {
+                position: absolute;
+                top: 21rem;
+                left: 5rem;
+                opacity: 0;
+                transform: translateY(20px);
+                transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+            }
+
+            .custom-position4 {
+                position: absolute;
+                top: 28rem;
+                left: 5rem;
+                opacity: 0;
+                transform: translateY(20px);
+                transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+            }
+
+            .quote1 {
+                width: 100%;
+                padding-left: 1.5rem;
+                padding-right: 1.5rem;
+                opacity: 0;
+                transform: translateY(20px);
+                transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+            }
+
+            .quote2 {
+                width: 100%;
+                padding-left: 1.5rem;
+                padding-right: 1.5rem;
+                margin-top: 2rem;
+                opacity: 0;
+                transform: translateY(20px);
+                transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+            }
+
+            .time-line {
+                opacity: 0;
+                transform: translateY(20px);
+                transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+            }
+
+            /* Classe per attivare l'animazione */
+            .show {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        </style>
+    </head>
+</head>
+
+<body class="bg-gray-50">
+
+    <!-- Hero Section -->
+    <section class="relative h-screen flex flex-col justify-between px-6 md:px-12">
+        <!-- Top buttons -->
+        <div class="flex justify-between items-center py-4">
+            <button class="hero-btn">Available for work</button>
+            <button class="about-btn">• About Me</button>
+        </div>
+
+        <!-- Main Content -->
+        <div class="flex flex-col md:flex-row justify-between items-center flex-grow relative">
+            <!-- Left Text (Posizionato assolutamente) -->
+            <!-- div class="absolute inset-0 flex items-center justify-center z-10" -->
+            <div class="custom-position1 inset-x-0 z-10">
+                <h1 class="hero-text text-black text-center" opacity-0>A software engineer</h1>
+            </div>
+            <div class="custom-position2 z-10">
+                <h1 class="hero-text text-black text-center" opacity-0>who finds joy in</h1>
+            </div>
+            <div class="custom-position3 z-10">
+                <h1 class="hero-text text-black text-center" opacity-0>transforming ideas</h1>
+            </div>
+            <div class="custom-position4 z-10">
+                <h1 class="hero-text text-black text-center" opacity-0>into reality.</h1>
+            </div>
+        </div>
+
+        <!--
+A SOFTWARE ENGINEER
+WHO FINDS JOY IN
+TRANSFORMING IDEAS
+INTO REALITY.
+
+A software engineer who finds joy in transforming ideas into reality.
+        -->
+
+        <!-- Right Image -->
+        <div class="absolute bottom-0 right-0 w-1/2 h-4/6 md:w-3/5">
+            <img src="https://via.placeholder.com/400x400" alt="Profile Image"
+                class="w-full h-full object-cover rounded-custom-left shadow-lg">
+
+            <style>
+                .rounded-custom-left {
+                    border-top-left-radius: 50px;
+                    border-bottom-left-radius: 50px;
+                    border-top-right-radius: 0;
+                    border-bottom-right-radius: 0;
+                }
+            </style>
+        </div>
+    </section>
+
+
+    <section class="bg-gray-50 py-12">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
+            <!-- Testo a sinistra -->
+            <div class="quote1">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">Titolo a Sinistra</h2>
+                <p class="text-gray-700">I design intelligent systems that adapt to users' needs.</p>
+            </div>
+
+            <!-- Testo a destra -->
+            <div class="quote2">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">Titolo a Destra</h2>
+                <p class="text-gray-700">In a world transformed by technology, the next frontier is integrating AI
+                    algorithms to create systems that not only adapt but anticipate users' needs, pushing innovation
+                    forward.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Timeline Section -->
+
+    <section class="h-screen flex flex-col justify-center bg-white py-12">
+
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8">My Journey</h2>
+            <ol class="relative border-s border-gray-200 dark:border-gray-700">
+                <div class="time-line">
+                    <li class="mb-10 ms-4">
+                        <div
+                            class="time-line absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700">
+                        </div>
+                        <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">January
+                            2020</time>
+                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Started Learning Web Development
+                        </h3>
+                        <p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">I began my journey into
+                            web
+                            development by learning HTML, CSS, and JavaScript.</p>
+                    </li>
+                </div>
+                <div class="time-line">
+                    <li class="mb-10 ms-4">
+                        <div
+                            class="time-line absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700">
+                        </div>
+                        <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">June
+                            2021</time>
+                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white">First Freelance Project</h3>
+                        <p class="text-base font-normal text-gray-500 dark:text-gray-400">Completed my first freelance
+                            project for a local business.</p>
+                    </li>
+                </div>
+                <div class="time-line">
+                    <li class="mb-10 ms-4">
+                        <div
+                            class="time-line absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700">
+                        </div>
+                        <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">December
+                            2022</time>
+                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Joined a Web Development Team
+                        </h3>
+                        <p class="text-base font-normal text-gray-500 dark:text-gray-400">Joined a team of developers to
+                            work on a large-scale web application.</p>
+                    </li>
+                </div>
+                <div class="time-line">
+                    <li class="mb-10 ms-4">
+                        <div
+                            class="time-line absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700">
+                        </div>
+                        <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">January
+                            2020</time>
+                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Started Learning Web Development
+                        </h3>
+                        <p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">I began my journey into
+                            web
+                            development by learning HTML, CSS, and JavaScript.</p>
+                    </li>
+                </div>
+                <div class="time-line">
+                    <li class="mb-10 ms-4">
+                        <div
+                            class="time-line absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700">
+                        </div>
+                        <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">June
+                            2021</time>
+                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white">First Freelance Project</h3>
+                        <p class="text-base font-normal text-gray-500 dark:text-gray-400">Completed my first freelance
+                            project for a local business.</p>
+                    </li>
+                </div>
+                <div class="time-line">
+                    <li class="ms-4">
+                        <div
+                            class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700">
+                        </div>
+                        <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">December
+                            2022</time>
+                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Joined a Web Development Team
+                        </h3>
+                        <p class="text-base font-normal text-gray-500 dark:text-gray-400">Joined a team of developers to
+                            work on a large-scale web application.</p>
+                    </li>
+                </div>
+            </ol>
+        </div>
+    </section>
+
+
+    <!-- Contatti e Footer -->
+    <section id="contatti" class="bg-gray-800 text-white py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-8">Contattami</h2>
+            <form action="#" class="max-w-lg mx-auto">
+                <div class="mb-4">
+                    <label for="name" class="block mb-2 text-sm font-medium">Nome</label>
+                    <input type="text" id="name" class="w-full p-3 rounded-md text-gray-900" placeholder="Il tuo nome">
+                </div>
+                <div class="mb-4">
+                    <label for="email" class="block mb-2 text-sm font-medium">Email</label>
+                    <input type="email" id="email" class="w-full p-3 rounded-md text-gray-900"
+                        placeholder="La tua email">
+                </div>
+                <div class="mb-4">
+                    <label for="message" class="block mb-2 text-sm font-medium">Messaggio</label>
+                    <textarea id="message" rows="4" class="w-full p-3 rounded-md text-gray-900"
+                        placeholder="Scrivi il tuo messaggio"></textarea>
+                </div>
+                <button type="submit"
+                    class="bg-blue-600 py-3 px-6 rounded-md font-bold hover:bg-blue-700">Invia</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2024 Il mio nome. Tutti i diritti riservati.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Funzione principale per iniziare le animazioni
+        function initAnimations() {
+            animateSequentially('.custom-position1, .custom-position2, .custom-position3, .custom-position4');
+            observeOnScroll('.quote1, .quote2, .time-line');
+        }
+
+        // Funzione per far apparire gli elementi in sequenza
+        function animateSequentially(selector) {
+            const elements = Array.from(document.querySelectorAll(selector));
+            elements.forEach((element, index) => {
+                setTimeout(() => {
+                    element.classList.add('show');
+                }, index * 100); // Ritarda l'apparizione di 100ms per ogni elemento
+            });
+        }
+
+        // Funzione per mostrare l'elemento quando entra nella viewport
+        function observeOnScroll(selector) {
+            const elements = Array.from(document.querySelectorAll(selector));
+
+            function showElement(entries, observer) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('show'); // Aggiunge la classe per mostrare l'elemento
+                        observer.unobserve(entry.target); // Smette di osservare l'elemento una volta visibile
+                    }
+                });
+            }
+
+            // Crea un nuovo IntersectionObserver
+            const observer = new IntersectionObserver(showElement, {
+                threshold: 0.8 // L'elemento deve essere visibile almeno al 50% per attivare l'evento
+            });
+
+            // Avvia l'osservazione di ogni elemento
+            elements.forEach(element => {
+                observer.observe(element);
+            });
+        }
+
+        // Avvia le animazioni e osservazioni
+        initAnimations();
+    });
+
+</script>
